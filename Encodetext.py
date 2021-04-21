@@ -11,8 +11,7 @@ import re
 from unicodedata import normalize
 import string
 cx_Oracle.init_oracle_client(lib_dir=r"C:\oracle\instantclient_19_9")
-connection = cx_Oracle.connect("SCH_UNIVERSAL", "un1v4rs4l20",
-                               "10.5.112.35:1521/dgpp")
+connection = cx_Oracle.connect("usuario", "password", "IP:1521/dgpp")
 # try:
 cursor = connection.cursor()
 query = """select id, DESCB,fecha_hoy,fecha_man,des,fecha_com,fecha_ac from test_mail"""
